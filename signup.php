@@ -1,10 +1,8 @@
 <!-- Christian Hart,  -->
 
-<!-- This is the landing page for the game
-TODO: Design visual logo of the game
-TODO: Create HTML form for the user to login to an instance of the game
-TODO: Link to account creation page
-TODO: Link to leaderboard
+<!-- This page should allow the user to create a new account
+TODO: Design the backend for account creation/persistence
+TODO: Create HTML form for signup
 -->
 
 <!DOCTYPE html>
@@ -14,12 +12,9 @@ TODO: Link to leaderboard
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Jeopardy Home Page</title>
+        <title>Jeopardy Sign-up</title>
     </head>
     <body>
-
-        <h1>Jeopardy!</h1>
-        <p>America's favorite quiz show</p>
 
     </body>
 </html>
