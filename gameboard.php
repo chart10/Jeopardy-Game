@@ -20,6 +20,49 @@ TODO: Link to leaderboard
         <title>Jeopardy Game Board</title>
     </head>
     <body>
-
+        <table class="button">
+            <tr>
+                <th>Hot Drinks!</th>
+                <th>Sci-fi</th>
+                <th>World Geography</th>
+                <th>Animals</th>
+                <th>Music</th>
+            </tr>
+            <tr>
+                <td>100</td>
+                <td>100</td>
+                <td>100</td>
+                <td>100</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>200</td>
+                <td>200</td>
+                <td>200</td>
+                <td>200</td>
+                <td>200</td>
+            </tr>
+            <tr>
+                <td>300</td>
+                <td>300</td>
+                <td>300</td>
+                <td>300</td>
+                <td>300</td>
+            </tr>
+            <tr>
+                <td>400</td>
+                <td>400</td>
+                <td>400</td>
+                <td>400</td>
+                <td>400</td>
+            </tr>
+            <tr>
+                <td>500</td>
+                <td>500</td>
+                <td>500</td>
+                <td>500</td>
+                <td>500</td>
+            </tr>
+        </table>
     </body>
 </html>
