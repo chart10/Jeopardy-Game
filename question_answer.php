@@ -1,4 +1,4 @@
-<!-- Christian Hart,  -->
+<!-- Christian Hart, Jamie Kouttu, Alex Diaz-->
 
 <!-- This page should include the question and possible answers for a
 particular box from gameboard.php
