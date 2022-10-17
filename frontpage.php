@@ -1,4 +1,4 @@
-<!-- Christian Hart,  -->
+<!-- Christian Hart, Jamie Kouttu, Alex Diaz -->
 
 <!-- This is the landing page for the game
 TODO: Design visual logo of the game

@@ -1,4 +1,4 @@
-<!-- Christian Hart,  -->
+<!-- Christian Hart, Jamie Kouttu, Alex Diaz -->
 
 <!-- This is where we should include the code for the main page of an active game.
 TODO: HTML table of all questions in a Jeopardy grid layout.
