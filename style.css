@@ -2,3 +2,37 @@
 
 /* Include style guide in this file */
 
+.jepButton{
+    overflow: auto;
+    text-align: center;
+    font-size: 1.0em;
+    font-weight: bold;
+    line-height: 200%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.jepButton table{
+    border: 1px solid;
+}
+.jepButton input[type=button]{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding-top: .6em;
+    padding-bottom: .6em;
+    color: #cea605;
+    background-color: #04289C;
+    box-shadow: 2px 2px 1px #888888;
+    clear: right;
+    float: right;
+}
+.jepButton input:active{
+    background-color: #04509c;
+}
+.wrong{
+    background-color: #9c0404;
+}
+.correct{
+    background-color: #159b0c;
+}

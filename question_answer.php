@@ -6,7 +6,10 @@ TODO: Display question corresponding to original box
 TODO: Each answer should be a link that updates the original box to "right"/"wrong"
 TODO: access to the question-answer page should be disabled from completed question boxes
 -->
-
+<?php
+$data=$_POST;
+echo $data;
+?>
 <!DOCTYPE html>
 <html lang="en-us">
     <head>
