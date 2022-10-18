@@ -18,11 +18,10 @@ session_start();
     if (isset($_POST['login']) && !empty($_POST['username'])
         && !empty($_POST['password'])) {
 
-        if ($_POST['username'] == 'test' &&
-            $_POST['password'] == '1234') {
+        if ($_POST['password'] == '1234') {
             $_SESSION['valid'] = true;
             $_SESSION['timeout'] = time();
-            $_SESSION['username'] = 'test';
+            $_SESSION['username'] = $_POST['username'];
 
             echo 'Valid username and password';
         }else {
