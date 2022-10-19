@@ -12,6 +12,7 @@ TODO: Link to leaderboard
 <?php
 $wrong=false;
 $correct=false;
+
 ?>
 <!DOCTYPE html>
 <html lang="en-us">
@@ -32,41 +33,41 @@ $correct=false;
                 <th>Animals</th>
                 <th>Music</th>
             </tr>
-            <form action="question_answer.php" method="post">
+            <form id="board" action="question_answer.php" method="get">
             <tr>
-                <td><input type="button" name="101button" value="$100"/></td>
-                <td><input type="button" name="102button" value="$100"/></td>
-                <td><input type="button" name="103button" value="$100"/></td>
-                <td><input type="button" name="104button" value="$100"/></td>
-                <td><input type="button" name="105button" value="$100"/></td>
+                <td><input type="submit" name="11" value="$100"/></td>
+                <td><input type="submit" name="12" value="$100"/></td>
+                <td><input type="submit" name="13" value="$100"/></td>
+                <td><input type="submit" name="14" value="$100"/></td>
+                <td><input type="submit" name="15" value="$100"/></td>
             </tr>
             <tr>
-                <td><input type="button" name="201button" value="$200"/></td>
-                <td><input type="button" name="202button" value="$200"/></td>
-                <td><input type="button" name="203button" value="$200"/></td>
-                <td><input type="button" name="204button" value="$200"/></td>
-                <td><input type="button" name="205button" value="$200"/></td>
+                <td><input type="submit" name="21" value="$200"/></td>
+                <td><input type="submit" name="22" value="$200"/></td>
+                <td><input type="submit" name="23" value="$200"/></td>
+                <td><input type="submit" name="24" value="$200"/></td>
+                <td><input type="submit" name="25" value="$200"/></td>
             </tr>
             <tr>
-                <td><input type="button" name="301button" value="$300"/></td>
-                <td><input type="button" name="302button" value="$300"/></td>
-                <td><input type="button" name="303button" value="$300"/></td>
-                <td><input type="button" name="304button" value="$300"/></td>
-                <td><input type="button" name="305button" value="$300"/></td>
+                <td><input type="submit" name="31" value="$300"/></td>
+                <td><input type="submit" name="32" value="$300"/></td>
+                <td><input type="submit" name="33" value="$300"/></td>
+                <td><input type="submit" name="34" value="$300"/></td>
+                <td><input type="submit" name="35" value="$300"/></td>
             </tr>
             <tr>
-                <td><input type="button" name="401button" value="$400"/></td>
-                <td><input type="button" name="402button" value="$400"/></td>
-                <td><input type="button" name="403button" value="$400"/></td>
-                <td><input type="button" name="404button" value="$400"/></td>
-                <td><input type="button" name="405button" value="$400"/></td>
+                <td><input type="submit" name="41" value="$400"/></td>
+                <td><input type="submit" name="42" value="$400"/></td>
+                <td><input type="submit" name="43" value="$400"/></td>
+                <td><input type="submit" name="44" value="$400"/></td>
+                <td><input type="submit" name="45" value="$400"/></td>
             </tr>
             <tr>
-                <td><input type="button" name="501button" value="$500"/></td>
-                <td><input type="button" name="502button" value="$500"/></td>
-                <td><input type="button" name="503button" value="$500"/></td>
-                <td><input type="button" name="504button" value="$500"/></td>
-                <td><input type="button" name="505button" value="$500"/></td>
+                <td><input type="submit" name="51" value="$500"/></td>
+                <td><input type="submit" name="52" value="$500"/></td>
+                <td><input type="submit" name="53" value="$500"/></td>
+                <td><input type="submit" name="54" value="$500"/></td>
+                <td><input type="submit" name="55" value="$500"/></td>
             </tr>
             </form>
         </table>
