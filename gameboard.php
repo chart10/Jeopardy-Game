@@ -33,41 +33,41 @@ $correct=false;
                 <th>Animals</th>
                 <th>Music</th>
             </tr>
-            <form id="board" action="question_answer.php" method="get">
+            <form action="question_answer.php" method="get">
             <tr>
-                <td><input type="submit" name="11" value="$100"/></td>
-                <td><input type="submit" name="12" value="$100"/></td>
-                <td><input type="submit" name="13" value="$100"/></td>
-                <td><input type="submit" name="14" value="$100"/></td>
-                <td><input type="submit" name="15" value="$100"/></td>
+                <td><button type="submit" name="qnum" value="11">100</button></td>
+                <td><button type="submit" name="qnum" value="12">100</button></td>
+                <td><button type="submit" name="qnum" value="13">100</button></td>
+                <td><button type="submit" name="qnum" value="14">100</button></td>
+                <td><button type="submit" name="qnum" value="15">100</button></td>
             </tr>
             <tr>
-                <td><input type="submit" name="21" value="$200"/></td>
-                <td><input type="submit" name="22" value="$200"/></td>
-                <td><input type="submit" name="23" value="$200"/></td>
-                <td><input type="submit" name="24" value="$200"/></td>
-                <td><input type="submit" name="25" value="$200"/></td>
+                <td><button type="submit" name="qnum" value="21">200</button></td>
+                <td><button type="submit" name="qnum" value="22">200</button></td>
+                <td><button type="submit" name="qnum" value="23">200</button></td>
+                <td><button type="submit" name="qnum" value="24">200</button></td>
+                <td><button type="submit" name="qnum" value="25">200</button></td>
             </tr>
             <tr>
-                <td><input type="submit" name="31" value="$300"/></td>
-                <td><input type="submit" name="32" value="$300"/></td>
-                <td><input type="submit" name="33" value="$300"/></td>
-                <td><input type="submit" name="34" value="$300"/></td>
-                <td><input type="submit" name="35" value="$300"/></td>
+                <td><button type="submit" name="qnum" value="31">300</button></td>
+                <td><button type="submit" name="qnum" value="32">300</button></td>
+                <td><button type="submit" name="qnum" value="33">300</button></td>
+                <td><button type="submit" name="qnum" value="34">300</button></td>
+                <td><button type="submit" name="qnum" value="35">300</button></td>
             </tr>
             <tr>
-                <td><input type="submit" name="41" value="$400"/></td>
-                <td><input type="submit" name="42" value="$400"/></td>
-                <td><input type="submit" name="43" value="$400"/></td>
-                <td><input type="submit" name="44" value="$400"/></td>
-                <td><input type="submit" name="45" value="$400"/></td>
+                <td><button type="submit" name="qnum" value="41">400</button></td>
+                <td><button type="submit" name="qnum" value="42">400</button></td>
+                <td><button type="submit" name="qnum" value="43">400</button></td>
+                <td><button type="submit" name="qnum" value="44">400</button></td>
+                <td><button type="submit" name="qnum" value="45">400</button></td>
             </tr>
             <tr>
-                <td><input type="submit" name="51" value="$500"/></td>
-                <td><input type="submit" name="52" value="$500"/></td>
-                <td><input type="submit" name="53" value="$500"/></td>
-                <td><input type="submit" name="54" value="$500"/></td>
-                <td><input type="submit" name="55" value="$500"/></td>
+                <td><button type="submit" name="qnum" value="51">500</button></td>
+                <td><button type="submit" name="qnum" value="52">500</button></td>
+                <td><button type="submit" name="qnum" value="53">500</button></td>
+                <td><button type="submit" name="qnum" value="54">500</button></td>
+                <td><button type="submit" name="qnum" value="55">500</button></td>
             </tr>
             </form>
         </table>

@@ -7,21 +7,8 @@ TODO: Each answer should be a link that updates the original box to "right"/"wro
 TODO: access to the question-answer page should be disabled from completed question boxes
 -->
 <?php
-$row=0;
-$col=0;
-$x=2;
-$y=2;
-while($x<6){
-    while($y<6){
-        if(isset ($_GET["$x$y"])) {
-            $row=$x;
-            $col=$y;
-        }
-        $x=$x+1;
-        $y=$y+1;
-    }
-}
-echo $col, $row;
+$qnum=$_GET["qnum"];
+
 ?>
 <!DOCTYPE html>
 <html lang="en-us">
