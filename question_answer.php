@@ -7,8 +7,57 @@ TODO: Each answer should be a link that updates the original box to "right"/"wro
 TODO: access to the question-answer page should be disabled from completed question boxes
 -->
 <?php
-$qnum=$_GET["qnum"];
-
+$quesNum="";
+$value="";
+$answer="";
+$question="";
+$a1="";
+$a2="";
+$a3="";
+$a4="";
+function printQnA(){
+    $qnum=$_GET["qnum"];
+    $data = fopen("question_answer.txt", 'r');
+    $found=false;
+    if($line=fgets($data)){
+        while($found!=true){
+            $quest=explode("/",$line);
+            if($qnum==$quest[0]){
+                $found=true;
+                $quesNum=$quest[0];
+                $value=$quest[1];
+                $answer=$quest[2];
+                $question=$quest[3];
+                $a1=$quest[4];
+                $a2=$quest[5];
+                $a3=$quest[6];
+                $a4=$quest[7];
+            }else{
+                $line=fgets($data);
+            }
+        }
+    }
+    print ("the question is: $question");
+    echo "<br>$a1";
+    echo "<br>$a2";
+    echo "<br>$a3";
+    echo "<br>$a4";
+    echo "<h2>$question</h2>";
+    /*echo "<input type='radio' name='answers' id='anws1' value='a'><label for='anws1'>$a1</label>";
+    echo "<input type='radio' name='answers' id='anws2' value='b'><label for='anws2'>$a2</label>";
+    echo "<input type='radio' name='answers' id='anws3' value='c'><label for='anws3'>$a3</label>";
+    echo "<input type='radio' name='answers' id='anws4' value='d'><label for='anws4'>$a4</label>";*/
+    echo ("<form action='answers.php' method='post'>
+        <ul>
+            <li><input type='radio' name='answers' id='anws1' value='A,$qnum'><label for='anws1'>$a1</label></li>
+            <li><input type='radio' name='answers' id='anws2' value='B'><label for='anws2'>$a2</label></li>
+            <li><input type='radio' name='answers' id='anws3' value='C'><label for='anws3'>$a3</label></li>
+            <li><input type='radio' name='answers' id='anws4' value='D'><label for='anws4'>$a4</label></li>
+        </ul>
+        <input type='submit' name='sub' value='Submit Final Answer'>
+        </form>");
+    fclose($data);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en-us">
@@ -20,6 +69,18 @@ $qnum=$_GET["qnum"];
     <title>Jeopardy Question Page</title>
 </head>
 <body>
-
+<div class="jepQuestion">
+    <?=printQnA(); ?>
+    <!--   <h2>$question</h2>
+    /* <form action="<  ?= $_SERVER['PHP_SELF'];?>" method="post">
+    <ul>
+        <li><input type="radio" name="answers" id="anws1" value="a"><label for="anws1">$a1</label></li>
+        <li><input type="radio" name="answers" id="anws2" value="b"><label for="anws2">$a2</label></li>
+        <li><input type="radio" name="answers" id="anws3" value="c"><label for="anws3">$a3</label></li>
+        <li><input type="radio" name="answers" id="anws4" value="d"><label for="anws4">$a4</label></li>
+    </ul>
+    <input type="button" name="sub" value="Find Answer!">
+    </form> -->
+</div>
 </body>
 </html>
