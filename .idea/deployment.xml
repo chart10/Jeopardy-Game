@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" remoteFilesAllowedToDisappearOnAutoupload="false">
+  <component name="PublishConfigData" autoUpload="Always" serverName="CODD" remoteFilesAllowedToDisappearOnAutoupload="false" autoUploadExternalChanges="true">
     <serverData>
-      <paths name="Codd Server">
+      <paths name="CODD">
         <serverdata>
           <mappings>
-            <mapping deploy="/public_html/project1" local="$PROJECT_DIR$" web="/~chart10/project1" />
+            <mapping deploy="/public_html/projecttesting/01" local="$PROJECT_DIR$" web="/projecttesting/01" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="XAMPP Apache">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
     </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>

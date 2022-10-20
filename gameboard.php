@@ -10,6 +10,7 @@ TODO: (OPTIONAL) Randomize a box as "Daily Double" that allows the user to wager
 TODO: Link to leaderboard
 -->
 <?php
+session_start();
 $wrong=false;
 $correct=false;
 
@@ -24,6 +25,20 @@ $correct=false;
         <title>Jeopardy Game Board</title>
     </head>
     <body>
+    <?php
+    //if session username not set, direct user to log in
+    if(!isset($_SESSION['username'])){
+        ?>
+    <p>You are not logged in. Log in <a href="login.php">here</a>!</p>
+    <?php
+    }
+    else{
+        //if session score is not set (i.e. the session has just started), sets the score at 0
+        if(!isset($_SESSION['score'])){
+            $_SESSION['score'] = 0;
+        }
+    ?>
+        <h2>Current score: <?= $_SESSION['score']?></h2>
         <table class="jepButton">
             <caption>Jepordy Game!</caption>
             <tr>
@@ -71,5 +86,9 @@ $correct=false;
             </tr>
             </form>
         </table>
+        <p><a href="logout.php">Log out here!</a></p>
+    <?php
+    }
+    ?>
     </body>
 </html>

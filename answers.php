@@ -1,26 +1,15 @@
 <?php
-$dataImp=$_POST["answers"];
+session_start();
+$dataImp=$_POST["answers"]; //receive data in format (user answer),(correct answer),(question value)
 $answer=explode(",",$dataImp);
-$data = fopen("question_answer.txt", 'r');
-$found=false;
-$corAnswer=0;
-$value=0;
-if($line=fgets($data)){
-    while($found!=true){
-        $quest=explode("/",$line);
-        if($answer[1]==$quest[0]){
-            $found=true;
-            $value=$quest[1];
-            $corAnswer=$quest[2];
-        }else{
-            $line=fgets($data);
-        }
-    }
-}
-if($answer[1]==$corAnswer){
+$corAnswer=$answer[1];
+$value=$answer[2];
+if($answer[0]==$corAnswer){
     echo"You got it right! $value added too your score!";
+    $_SESSION['score'] = $_SESSION['score'] + $value; //add to score
 }
 else{
     echo"You got it wrong!";
 }
 echo"";
+header('Refresh: 5; URL = gameboard.php');

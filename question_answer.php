@@ -7,6 +7,7 @@ TODO: Each answer should be a link that updates the original box to "right"/"wro
 TODO: access to the question-answer page should be disabled from completed question boxes
 -->
 <?php
+session_start();
 $quesNum="";
 $value="";
 $answer="";
@@ -15,6 +16,7 @@ $a1="";
 $a2="";
 $a3="";
 $a4="";
+
 function printQnA(){
     $qnum=$_GET["qnum"];
     $data = fopen("question_answer.txt", 'r');
@@ -49,10 +51,10 @@ function printQnA(){
     echo "<input type='radio' name='answers' id='anws4' value='d'><label for='anws4'>$a4</label>";*/
     echo ("<form action='answers.php' method='post'>
         <ul>
-            <li><input type='radio' name='answers' id='anws1' value='A,$qnum'><label for='anws1'>$a1</label></li>
-            <li><input type='radio' name='answers' id='anws2' value='B'><label for='anws2'>$a2</label></li>
-            <li><input type='radio' name='answers' id='anws3' value='C'><label for='anws3'>$a3</label></li>
-            <li><input type='radio' name='answers' id='anws4' value='D'><label for='anws4'>$a4</label></li>
+            <li><input type='radio' name='answers' id='anws1' value='A,$answer,$value'><label for='anws1'>$a1</label></li>
+            <li><input type='radio' name='answers' id='anws2' value='B,$answer,$value'><label for='anws2'>$a2</label></li>
+            <li><input type='radio' name='answers' id='anws3' value='C,$answer,$value'><label for='anws3'>$a3</label></li>
+            <li><input type='radio' name='answers' id='anws4' value='D,$answer,$value'><label for='anws4'>$a4</label></li>
         </ul>
         <input type='submit' name='sub' value='Submit Final Answer'>
         </form>");
