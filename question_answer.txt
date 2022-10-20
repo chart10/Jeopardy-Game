@@ -1,0 +1,25 @@
+1/200/D/Arabica and robusto are just two of the different varieties of THIS common hot drink./What is Chai?/What is Camomile?/What is Matcha?/What is Coffee?
+2/400/C/Coffee "beans" actually comes from THIS part of the coffee plant./What is fruit?/What are leaves?/What are seeds?/What are roots?
+3/600/D/Thomas Jefferson was a big fan of THIS popular winter time drink./What is apple cider?/What is mulled wine?/What is Earl Grey tea?/What is hot chocolate?
+4/800/B/With over 30,000 cafes around the globe, THIS company is the world's largest coffee retailer./What is Dunkin' Donuts?/What is Starbucks?/What is Tim Hortons?/What is Pete's Coffee?
+5/1000/A/Black, green and white are among the tea varieties that come from THIS plant./What is Camellia sinensis?/What is Rubiaceae?/What is Cannabis?/What is Toxicodendron?
+6/200/B/Computer hacking and corporate intrigue are some of the common tropes in THIS sci-fi subgenre./What is post-apocalyptic?/What is cyberpunk?/What is space Western?/What is steampunk?
+7/400/D/"Beam me up, Scottie" was a line from THIS popular space exploring TV show./What is Battlestar Galactica?/What is Stargate?/What is Westworld?/What is Star Trek?
+8/600/D/THIS up and coming director was the mastermind behind Star Wars: A New Hope in 1977./Who is Isaac Asimov?/Who is William Shatner?/Who is Martin Scorsese?/Who is George Lucas?
+9/800/A/In THIS 1982 CGI heavy film, a game developer is transported into the software of a computer and must escape!/What is Tron?/What is The Fly?/What is Weird Science?/What is Short Circuit?
+10/1000/C/The heir to House Atreides must cross a desert filled with giant sand worms in THIS classic novel./What is Ender's Game?/What is Foundation?/What is Dune?/What is Brave New World?
+11/200/C/THIS is the world's largest continent, by area and population./What is Africa?/What is Antarctica?/What is Asia?/What is North America?
+12/400/A/The longest river in the world, the Amazon, stretches across THIS country./What is Brazil?/What is Portugal?/What is China?/What is Australia?
+13/600/B/In 2004, THIS skyscraper dethroned Canada's CN Tower as the tallest building in the world./What is the Sears Tower?/What is the Burj Khalifa?/What is the Shanghai Tower?/What is the Lakhta Center?
+14/800/D/There are over 7,000 islands in THIS archipelago nation-state./What are The Bahamas?/What is Fiji?/What is Malaysia?/What are the Philippines?
+15/1000/A/Surprisingly, THIS country is home to more ancient pyramids than Egypt./What is Sudan?/What is Colombia?/What is Mexico?/What is Algeria?
+16/200/B/The 2-toed one of THESE can live up to 20 years, most of it upside down in the canopy of the rainforest./What is a camel?/What is a sloth?/What is a bat?/What is a koala?
+17/400/D/THIS fearsome predator gets the first part of its name from the stripes on its sides./What is a mountain zebra?/What is a striped skunk?/What is a four-stripe damselfish?/What is a tiger shark?
+18/600/A/When faced with danger, certain ducks, snakes & mammals do THIS, also called thanatosis./What is play dead?/What is shoot venom?/What is burrow underground?/What is kick sand?
+19/800/D/The eastern gray kangaroo can cover 25 feet in a single leap, & they’re widespread in THIS, Australia's smallest state./What is New South Wales?/What is Victoria?/What is Queensland?/What is Tasmania?
+20/1000/C/Aside from camouflage, some species of octopus also use THIS tactic to avoid becoming easy prey./What is poop on itself?/What is hide in a stinging anemone?/What is spray ink?/What is throw rocks?
+21/200/C/THIS band is still the top-selling music act of all time./Who are AC DC?/Who are Pink Floyd?/Who are The Beatles?/Who are Led Zeppelin?
+22/400/D/THIS artist's genre mixing hit is the longest running number one Billboard song yet, at 19 weeks./Who is Elton John?/Who is Beyonce?/Who is Whitney Houston?/Who is Lil Nas X?
+23/600/A/The "Parental Advisory" label on explicit albums was created in 1985, in part, by former second lady Tipper Gore in reaction to THIS artist's music./Who is Prince?/Who are KISS?/Who are Metallica?/Who are N.W.A.?
+24/800/C/Thanks to the streaming hit show Stranger Things, THIS 80s hit by artist Kate Bush topped the billboard charts in 2022./What is Wuthering Heights?/What is Orinoco Flow?/What is Running Up that Hill?/What is 99 Red Balloons?
+25/1000/A/Early music streaming service Napster were shutdown in 2001 thanks in part to legal action by THIS musical act./Who are Metallica?/Who is Brittany Spears?/Who are Destiny's Child?/Who are Smash Mouth?

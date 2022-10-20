@@ -9,7 +9,11 @@ TODO: Button that resets the game for the user?
 TODO: (OPTIONAL) Randomize a box as "Daily Double" that allows the user to wager money
 TODO: Link to leaderboard
 -->
+<?php
+$wrong=false;
+$correct=false;
 
+?>
 <!DOCTYPE html>
 <html lang="en-us">
     <head>
@@ -20,7 +24,8 @@ TODO: Link to leaderboard
         <title>Jeopardy Game Board</title>
     </head>
     <body>
-        <table class="button">
+        <table class="jepButton">
+            <caption>Jepordy Game!</caption>
             <tr>
                 <th>Hot Drinks!</th>
                 <th>Sci-fi</th>
@@ -28,41 +33,43 @@ TODO: Link to leaderboard
                 <th>Animals</th>
                 <th>Music</th>
             </tr>
+            <form action="question_answer.php" method="get">
             <tr>
-                <td>100</td>
-                <td>100</td>
-                <td>100</td>
-                <td>100</td>
-                <td>100</td>
+                <td><button type="submit" name="qnum" value="1">100</button></td>
+                <td><button type="submit" name="qnum" value="6">100</button></td>
+                <td><button type="submit" name="qnum" value="11">100</button></td>
+                <td><button type="submit" name="qnum" value="16">100</button></td>
+                <td><button type="submit" name="qnum" value="21">100</button></td>
             </tr>
             <tr>
-                <td>200</td>
-                <td>200</td>
-                <td>200</td>
-                <td>200</td>
-                <td>200</td>
+                <td><button type="submit" name="qnum" value="2">200</button></td>
+                <td><button type="submit" name="qnum" value="7">200</button></td>
+                <td><button type="submit" name="qnum" value="12">200</button></td>
+                <td><button type="submit" name="qnum" value="17">200</button></td>
+                <td><button type="submit" name="qnum" value="21">200</button></td>
             </tr>
             <tr>
-                <td>300</td>
-                <td>300</td>
-                <td>300</td>
-                <td>300</td>
-                <td>300</td>
+                <td><button type="submit" name="qnum" value="3">300</button></td>
+                <td><button type="submit" name="qnum" value="8">300</button></td>
+                <td><button type="submit" name="qnum" value="13">300</button></td>
+                <td><button type="submit" name="qnum" value="18">300</button></td>
+                <td><button type="submit" name="qnum" value="23">300</button></td>
             </tr>
             <tr>
-                <td>400</td>
-                <td>400</td>
-                <td>400</td>
-                <td>400</td>
-                <td>400</td>
+                <td><button type="submit" name="qnum" value="4">400</button></td>
+                <td><button type="submit" name="qnum" value="9">400</button></td>
+                <td><button type="submit" name="qnum" value="14">400</button></td>
+                <td><button type="submit" name="qnum" value="19">400</button></td>
+                <td><button type="submit" name="qnum" value="24">400</button></td>
             </tr>
             <tr>
-                <td>500</td>
-                <td>500</td>
-                <td>500</td>
-                <td>500</td>
-                <td>500</td>
+                <td><button type="submit" name="qnum" value="5">500</button></td>
+                <td><button type="submit" name="qnum" value="10">500</button></td>
+                <td><button type="submit" name="qnum" value="15">500</button></td>
+                <td><button type="submit" name="qnum" value="20">500</button></td>
+                <td><button type="submit" name="qnum" value="25">500</button></td>
             </tr>
+            </form>
         </table>
     </body>
 </html>
