@@ -1,6 +1,26 @@
 <!--Project 1: Christian Hart, Jamie Kouttu, Alex Diaz-->
 <?php
 session_start();
+
+$msg = '';
+
+if (isset($_POST['login']) && !empty($_POST['username'])
+    && !empty($_POST['password'])) {
+
+    if ($_POST['password'] == '1234') {
+        $_SESSION['valid'] = true;
+        $_SESSION['timeout'] = time();
+        $_SESSION['username'] = $_POST['username'];
+
+        $msg = 'Valid username and password';
+    }else {
+        $msg = 'Incorrect username or password';
+    }
+}
+
+if(isset($_SESSION['username'])){ //once the user has logged in, redirect to the gameboard
+    header('Refresh: 2; URL = gameboard.php');
+}
 ?>
 
 <!doctype html>
@@ -12,23 +32,7 @@ session_start();
 <body>
 <h2>Log In</h2>
 <p>Fill out your username and password to log in!</p>
-    <?php
-    $msg = '';
 
-    if (isset($_POST['login']) && !empty($_POST['username'])
-        && !empty($_POST['password'])) {
-
-        if ($_POST['password'] == '1234') {
-            $_SESSION['valid'] = true;
-            $_SESSION['timeout'] = time();
-            $_SESSION['username'] = $_POST['username'];
-
-            $msg = 'Valid username and password';
-        }else {
-            $msg = 'Incorrect username or password';
-        }
-    }
-    ?>
 <form action="<?php echo htmlspecialchars($_SERVER['login'])?>" method="post">
     <h4><?php echo $msg; ?></h4>
     <label>Username: </label>

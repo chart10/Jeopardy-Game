@@ -51,10 +51,10 @@ function printQnA(){
     echo "<input type='radio' name='answers' id='anws4' value='d'><label for='anws4'>$a4</label>";*/
     echo ("<form action='answers.php' method='post'>
         <ul>
-            <li><input type='radio' name='answers' id='anws1' value='A,$answer,$value'><label for='anws1'>$a1</label></li>
-            <li><input type='radio' name='answers' id='anws2' value='B,$answer,$value'><label for='anws2'>$a2</label></li>
-            <li><input type='radio' name='answers' id='anws3' value='C,$answer,$value'><label for='anws3'>$a3</label></li>
-            <li><input type='radio' name='answers' id='anws4' value='D,$answer,$value'><label for='anws4'>$a4</label></li>
+            <li><input type='radio' name='answers' id='anws1' value='A,$answer,$value,$qnum'><label for='anws1'>$a1</label></li>
+            <li><input type='radio' name='answers' id='anws2' value='B,$answer,$value,$qnum'><label for='anws2'>$a2</label></li>
+            <li><input type='radio' name='answers' id='anws3' value='C,$answer,$value,$qnum'><label for='anws3'>$a3</label></li>
+            <li><input type='radio' name='answers' id='anws4' value='D,$answer,$value,$qnum'><label for='anws4'>$a4</label></li>
         </ul>
         <input type='submit' name='sub' value='Submit Final Answer'>
         </form>");
