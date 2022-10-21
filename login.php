@@ -2,24 +2,46 @@
 <?php
 session_start();
 
-$msg = '';
-
-if (isset($_POST['login']) && !empty($_POST['username'])
-    && !empty($_POST['password'])) {
-
-    if ($_POST['password'] == '1234') {
-        $_SESSION['valid'] = true;
-        $_SESSION['timeout'] = time();
-        $_SESSION['username'] = $_POST['username'];
-
-        $msg = 'Valid username and password';
-    }else {
-        $msg = 'Incorrect username or password';
-    }
+if(isset($_SESSION['username'])){ //if user is already logged in, redirect the user to the game
+    header('URL = gameboard.php');
 }
 
-if(isset($_SESSION['username'])){ //once the user has logged in, redirect to the gameboard
-    header('Refresh: 2; URL = gameboard.php');
+//connect to database
+$database = mysqli_connect('localhost', 'root', '', 'users');
+//if there is an error connecting to the database, stop the script and display the error
+if (mysqli_connect_errno()) {
+// If there is an error with the connection, stop the script and display the error.
+    exit('Failed to connect to MySQL: ' . mysqli_connect_error());
+}
+
+$msg = '';
+
+if (isset($_POST['login'])) {
+    $username = mysqli_real_escape_string($database, $_POST['username']);
+    $password = mysqli_real_escape_string($database, $_POST['password']);
+
+    if(empty($_POST['username'])){
+        $msg = "Please enter username";
+    }
+
+    if(empty($_POST['password'])){
+        $msg = "Please enter password";
+    }
+
+    $query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
+    $login_result = mysqli_query($database, $query);
+    //query the database for a row with a matching username and password
+
+    if (mysqli_num_rows($login_result) == 1) {
+        //if a matching user was found, log in is suggessful! Redirect to game
+        $_SESSION['valid'] = true;
+        $_SESSION['username'] = $_POST['username'];
+
+        header('Refresh: 0; URL = gameboard.php');
+    }
+    else {
+        $msg = 'Incorrect username or password';
+    }
 }
 ?>
 
@@ -33,7 +55,7 @@ if(isset($_SESSION['username'])){ //once the user has logged in, redirect to the
 <h2>Log In</h2>
 <p>Fill out your username and password to log in!</p>
 
-<form action="<?php echo htmlspecialchars($_SERVER['login'])?>" method="post">
+<form action="" method="post">
     <h4><?php echo $msg; ?></h4>
     <label>Username: </label>
     <input type="text" name="username" placeholder="Username" required autofocus/><br/>
