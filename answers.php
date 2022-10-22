@@ -17,7 +17,7 @@ if($line=fgets($data)){
         }
     }
 }
-if($answer[0]==$corAnswer){
+if($answer[1]==$corAnswer){
     echo"You got it right! $value added too your score!";
 }
 else{
