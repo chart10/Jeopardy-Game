@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="XAMPP Apache" remoteFilesAllowedToDisappearOnAutoupload="false" autoUploadExternalChanges="true">
+  <component name="PublishConfigData" autoUpload="Always" serverName="MAMP Apache" remoteFilesAllowedToDisappearOnAutoupload="false" autoUploadExternalChanges="true">
     <serverData>
-      <paths name="CODD">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/public_html/projecttesting/01" local="$PROJECT_DIR$" web="/projecttesting/01" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="XAMPP Apache">
+      <paths name="MAMP Apache">
         <serverdata>
           <mappings>
             <mapping deploy="/project1" local="$PROJECT_DIR$" web="/project1" />

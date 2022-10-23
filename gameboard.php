@@ -68,6 +68,9 @@ if(!isset($_SESSION['q25']))
 $wrong=false;
 $correct=false;
 
+// Need a function to run for each question which decides whether to display "right" or "wrong" if
+// the question has been answered
+
 ?>
 <!DOCTYPE html>
 <html lang="en-us">
@@ -78,25 +81,27 @@ $correct=false;
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Jeopardy Game Board</title>
     </head>
-    <body>
+    <body class="jepBoard">
     <?php
     //if session username not set, direct user to log in
     if(!isset($_SESSION['username'])){
         ?>
-        <h1>You are not logged in. <a href="login.php">Log in</a> or <a href="registration.php">register</a> to play!</h1>
+        <div class="block-text">
+            <h2>You are not logged in. <a href="login.php">Log in</a> or <a href="registration.php">register</a> to play!</h2>
+        </div>
     <?php
     }
     else{
-        if($_SESSION['q1'] && $_SESSION['q2']==1 && $_SESSION['q3']==1 && $_SESSION['q4']==1 && $_SESSION['q5']==1
-            && $_SESSION['q6']==1 && $_SESSION['q7']==1 && $_SESSION['q8']==1 && $_SESSION['q9']==1 && $_SESSION['q10']==1
-            && $_SESSION['q11']==1 && $_SESSION['q12']==1 && $_SESSION['q13']==1 && $_SESSION['q14']==1 && $_SESSION['q15']==1
-            && $_SESSION['q16']==1 && $_SESSION['q17']==1 && $_SESSION['q18']==1 && $_SESSION['q19']==1 && $_SESSION['q20']==1
-            && $_SESSION['q21']==1 && $_SESSION['q22']==1 && $_SESSION['q23']==1 && $_SESSION['q24']==1 && $_SESSION['q25']==1) {
+        if($_SESSION['q1'] && $_SESSION['q2']>0 && $_SESSION['q3']>0 && $_SESSION['q4']>0 && $_SESSION['q5']>0
+            && $_SESSION['q6']>0 && $_SESSION['q7']>0 && $_SESSION['q8']>0 && $_SESSION['q9']>0 && $_SESSION['q10']>0
+            && $_SESSION['q11']>0 && $_SESSION['q12']>0 && $_SESSION['q13']>0 && $_SESSION['q14']>0 && $_SESSION['q15']>0
+            && $_SESSION['q16']>0 && $_SESSION['q17']>0 && $_SESSION['q18']>0 && $_SESSION['q19']>0 && $_SESSION['q20']>0
+            && $_SESSION['q21']>0 && $_SESSION['q22']>0 && $_SESSION['q23']>0 && $_SESSION['q24']>0 && $_SESSION['q25']>0) {
             //if all questions have been answered, show final score and link to leaderboard
             //and store the user's score in the database if it is better than their previous top score
 
             //connect to database
-            $database = mysqli_connect('localhost', 'root', '', 'users');
+            $database = mysqli_connect('localhost', 'root', 'root', 'users');
             //if there is an error connecting to the database, stop the script and display the error
             if (mysqli_connect_errno()) {
             // If there is an error with the connection, stop the script and display the error.
@@ -119,9 +124,11 @@ $correct=false;
             }
 
             ?>
-            <h1>Your final score is: $<?= $_SESSION['score']?>!</h1>
-            <a href="leaderboard.php">Click here to see the leaderboard!</a>
-            <p><a href="logout.php">Log out here!</a></p>
+            <div class="block-text">
+                <h2>Your final score is: $<?= $_SESSION['score']?>!</h2>
+                <a href="leaderboard.php">Click here to see the leaderboard!</a>
+                <p><a href="logout.php">Log out here!</a></p>
+            </div>
         <?php
 
         }
@@ -131,109 +138,152 @@ $correct=false;
                 $_SESSION['score'] = 0;
             }
         ?>
-            <h2>Username: <?= $_SESSION['username']?></h2>
-            <h2>Current score: $<?= $_SESSION['score']?></h2>
-            <table class="jepButton">
-                <caption>Jeopardy Game!</caption>
+            <div class="user-heading">
+                <h2>PLAYER:&nbsp&nbsp<?= $_SESSION['username']?></h2>
+                <h2>SCORE:&nbsp&nbsp$<?= $_SESSION['score']?></h2>
+            </div>
+            <h1 class="gameboard-heading">Jeopardy!</h1>
+            <table class="jepTable">
                 <tr>
-                    <th>Hot Drinks!</th>
-                    <th>Sci-fi</th>
-                    <th>World Geography</th>
-                    <th>Animals</th>
-                    <th>Music</th>
+                    <th><button class="category">HOT DRINKS!</button></th>
+                    <th><button class="category">SCI-FI</button></th>
+                    <th><button class="category">WORLD GEOGRAPHY</button></th>
+                    <th><button class="category">ANIMALS</button></th>
+                    <th><button class="category">MUSIC</button></th>
                 </tr>
-                <form action="question_answer.php" method="get">
+                <form class="gameboard" action="question_answer.php" method="get">
                 <tr>
-                    <td><button type="submit" name="qnum" value="1"
-                        <?php if($_SESSION['q1'] == 1){ ?> disabled <?php } ?>
-                        >$200</button></td>
-                    <td><button type="submit" name="qnum" value="6"
-                            <?php if($_SESSION['q6'] == 1){ ?> disabled <?php } ?>
-                        >$200</button></td>
-                    <td><button type="submit" name="qnum" value="11"
-                            <?php if($_SESSION['q11'] == 1){ ?> disabled <?php } ?>
-                        >$200</button></td>
-                    <td><button type="submit" name="qnum" value="16"
-                            <?php if($_SESSION['q16'] == 1){ ?> disabled <?php } ?>
-                        >$200</button></td>
-                    <td><button type="submit" name="qnum" value="21"
-                            <?php if($_SESSION['q21'] == 1){ ?> disabled <?php } ?>
-                        >$200</button></td>
+                    <td>    <?php rightWrong('q1',1,100); ?>
+<!--                        --><?php //if($_SESSION['q1'] == 1){ ?>
+<!--                            <button class="correct" type="submit" name="qnum" value="1" disabled>RIGHT!</button></td>-->
+<!--                        --><?php //} else if($_SESSION['q1'] == 2){ ?>
+<!--                            <button class="wrong" type="submit" name="qnum" value="1" disabled>WRONG!</button></td>-->
+<!--                        --><?php //} else { ?>
+<!--                        <button class="jepButton" type="submit" name="qnum" value="1">$200</button>--><?php //} ?><!--</td>-->
+                    <td><?php if($_SESSION['q6'] == 1){ ?>
+                            <button class="correct" type="submit" name="qnum" value="6" disabled>RIGHT!</button></td>
+                        <?php } else if($_SESSION['q6'] == 2){ ?>
+                            <button class="wrong" type="submit" name="qnum" value="6" disabled>WRONG!</button></td>
+                        <?php } else { ?>
+                            <button class="jepButton" type="submit" name="qnum" value="6">$200</button><?php } ?></td>
+                    <td><?php if($_SESSION['q11'] == 1){ ?>
+                            <button class="correct" type="submit" name="qnum" value="11" disabled>RIGHT!</button></td>
+                        <?php } else if($_SESSION['q11'] == 2){ ?>
+                            <button class="wrong" type="submit" name="qnum" value="11" disabled>WRONG!</button></td>
+                        <?php } else { ?>
+                        <button class="jepButton" type="submit" name="qnum" value="11">$200</button><?php } ?></td>
+                    <td><?php if($_SESSION['q16'] == 1){ ?>
+                            <button class="correct" type="submit" name="qnum" value="16" disabled>RIGHT!</button></td>
+                        <?php } else if($_SESSION['q16'] == 2){ ?>
+                            <button class="wrong" type="submit" name="qnum" value="16" disabled>WRONG!</button></td>
+                        <?php } else { ?>
+                        <button class="jepButton" type="submit" name="qnum" value="16">$200</button><?php } ?></td></td>
+                    <td><?php if($_SESSION['q21'] == 1){ ?>
+                            <button class="correct" type="submit" name="qnum" value="21" disabled>RIGHT!</button></td>
+                        <?php } else if($_SESSION['q21'] == 2){ ?>
+                            <button class="wrong" type="submit" name="qnum" value="21" disabled>WRONG!</button></td>
+                        <?php } else { ?>
+                        <button class="jepButton" type="submit" name="qnum" value="21">$200</button><?php } ?></td></td>
                 </tr>
                 <tr>
-                    <td><button type="submit" name="qnum" value="2"
-                            <?php if($_SESSION['q2'] == 1){ ?> disabled <?php } ?>
-                        >$400</button></td>
-                    <td><button type="submit" name="qnum" value="7"
+                    <td><?php if($_SESSION['q2'] == 1){ ?>
+                            <button class="correct" type="submit" name="qnum" value="2" disabled>RIGHT!</button></td>
+                        <?php } else if($_SESSION['q2'] == 2){ ?>
+                            <button class="wrong" type="submit" name="qnum" value="2" disabled>WRONG!</button></td>
+                        <?php } else { ?>
+                        <button class="jepButton" type="submit" name="qnum" value="2">$400</button><?php } ?></td></td>
+                    <td><button class="jepButton" type="submit" name="qnum" value="7"
                             <?php if($_SESSION['q7'] == 1){ ?> disabled <?php } ?>
                         >$400</button></td>
-                    <td><button type="submit" name="qnum" value="12"
+                    <td><button class="jepButton" type="submit" name="qnum" value="12"
                             <?php if($_SESSION['q12'] == 1){ ?> disabled <?php } ?>
                         >$400</button></td>
-                    <td><button type="submit" name="qnum" value="17"
+                    <td><button class="jepButton" type="submit" name="qnum" value="17"
                             <?php if($_SESSION['q17'] == 1){ ?> disabled <?php } ?>
                         >$400</button></td>
-                    <td><button type="submit" name="qnum" value="22"
+                    <td><button class="jepButton" type="submit" name="qnum" value="22"
                             <?php if($_SESSION['q22'] == 1){ ?> disabled <?php } ?>
                         >$400</button></td>
                 </tr>
                 <tr>
-                    <td><button type="submit" name="qnum" value="3"
+                    <td><button class="jepButton" type="submit" name="qnum" value="3"
                             <?php if($_SESSION['q3'] == 1){ ?> disabled <?php } ?>
                         >$600</button></td>
-                    <td><button type="submit" name="qnum" value="8"
+                    <td><button class="jepButton" type="submit" name="qnum" value="8"
                             <?php if($_SESSION['q8'] == 1){ ?> disabled <?php } ?>
                         >$600</button></td>
-                    <td><button type="submit" name="qnum" value="13"
+                    <td><button class="jepButton" type="submit" name="qnum" value="13"
                             <?php if($_SESSION['q13'] == 1){ ?> disabled <?php } ?>
                         >$600</button></td>
-                    <td><button type="submit" name="qnum" value="18"
+                    <td><button class="jepButton" type="submit" name="qnum" value="18"
                             <?php if($_SESSION['q18'] == 1){ ?> disabled <?php } ?>
                         >$600</button></td>
-                    <td><button type="submit" name="qnum" value="23"
+                    <td><button class="jepButton" type="submit" name="qnum" value="23"
                             <?php if($_SESSION['q23'] == 1){ ?> disabled <?php } ?>
                         >$600</button></td>
                 </tr>
                 <tr>
-                    <td><button type="submit" name="qnum" value="4"
+                    <td><button class="jepButton" type="submit" name="qnum" value="4"
                             <?php if($_SESSION['q4'] == 1){ ?> disabled <?php } ?>
                         >$800</button></td>
-                    <td><button type="submit" name="qnum" value="9"
+                    <td><button class="jepButton" type="submit" name="qnum" value="9"
                             <?php if($_SESSION['q9'] == 1){ ?> disabled <?php } ?>
                         >$800</button></td>
-                    <td><button type="submit" name="qnum" value="14"
+                    <td><button class="jepButton" type="submit" name="qnum" value="14"
                             <?php if($_SESSION['q14'] == 1){ ?> disabled <?php } ?>
                         >$800</button></td>
-                    <td><button type="submit" name="qnum" value="19"
+                    <td><button class="jepButton" type="submit" name="qnum" value="19"
                             <?php if($_SESSION['q19'] == 1){ ?> disabled <?php } ?>
                         >$800</button></td>
-                    <td><button type="submit" name="qnum" value="24"
+                    <td><button class="jepButton" type="submit" name="qnum" value="24"
                             <?php if($_SESSION['q24'] == 1){ ?> disabled <?php } ?>
                         >$800</button></td>
                 </tr>
                 <tr>
-                    <td><button type="submit" name="qnum" value="5"
-                            <?php if($_SESSION['q5'] == 1){ ?> disabled <?php } ?>
-                        >$1000</button></td>
-                    <td><button type="submit" name="qnum" value="10"
+                    <td><?php if($_SESSION['q5'] == 1){ ?>
+                            <button class="correct" class="jepButton" type="submit" name="qnum" value="5" disabled>RIGHT!</button>
+                        <?php } else { ?>
+                            <button class="jepButton" type="submit" name="qnum" value="5">$1000</button>
+                        <?php }?></td>
+                    <td><button class="jepButton" type="submit" name="qnum" value="10"
                             <?php if($_SESSION['q10'] == 1){ ?> disabled <?php } ?>
                         >$1000</button></td>
-                    <td><button type="submit" name="qnum" value="15"
+                    <td><button class="jepButton" type="submit" name="qnum" value="15"
                             <?php if($_SESSION['q15'] == 1){ ?> disabled <?php } ?>
                         >$1000</button></td>
-                    <td><button type="submit" name="qnum" value="20"
+                    <td><button class="jepButton" type="submit" name="qnum" value="20"
                             <?php if($_SESSION['q20'] == 1){ ?> disabled <?php } ?>
                         >$1000</button></td>
-                    <td><button type="submit" name="qnum" value="25"
+                    <td><button class="jepButton" type="submit" name="qnum" value="25"
                             <?php if($_SESSION['q25'] == 1){ ?> disabled <?php } ?>
                         >$1000</button></td>
                 </tr>
                 </form>
             </table>
-            <p><a href="logout.php">Log out here!</a></p>
         <?php
         }
     }
     ?>
+    <div class="footer">
+        <ul>
+            <li><a href="login.php">Log In</a></li>
+            <li><a href="registration.php">Register</a></li>
+            <li><a href="gameboard.php">Game Board</a></li>
+            <li><a href="leaderboard.php">Leaderboard</a></li>
+            <li><a href="logout.php">Log Out</a></li>
+        </ul>
+    </div>
     </body>
 </html>
+<?php
+    function rightWrong($qnum, $num, $value) {
+        if($_SESSION[$qnum] == 0){ ?>
+            <button class="jepButton" type="submit" name=<?php $qnum ?> value="1"><?php $value ?></button></td>
+        <?php } else if($_SESSION[$qnum] == 1){ ?>
+            <button class="correct" type="submit" name=<?php $qnum ?> value="<?php $num ?>" disabled>RIGHT!</button></td>
+        <?php } else if($_SESSION[$qnum] == 2){ ?>
+            <button class="wrong" type="submit" name=<?php $qnum ?> value="<?php $num ?>" disabled>WRONG!</button></td>
+            <?php } ?>
+
+    <?php }
+?>

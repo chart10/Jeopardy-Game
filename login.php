@@ -7,7 +7,7 @@ if(isset($_SESSION['username'])){ //if user is already logged in, redirect the u
 }
 
 //connect to database
-$database = mysqli_connect('localhost', 'root', '', 'users');
+$database = mysqli_connect('localhost', 'root', 'root', 'users');
 //if there is an error connecting to the database, stop the script and display the error
 if (mysqli_connect_errno()) {
 // If there is an error with the connection, stop the script and display the error.
@@ -47,25 +47,33 @@ if (isset($_POST['login'])) {
 
 <!doctype html>
 <html lang="en/us">
-<head>
-    <title>Log In</title>
-</head>
+    <head>
+        <link rel="stylesheet" href="style.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Log In</title>
+    </head>
+    <body>
+        <h1>Log In</h1>
+        <div class="block-text"><p>Fill out your username and password to log in!</p>
 
-<body>
-<h2>Log In</h2>
-<p>Fill out your username and password to log in!</p>
+            <form action="" method="post">
+                <h4><?php echo $msg; ?></h4>
+                <label class="userprompt">Username: </label>
+                <input class="usertext" type="text" name="username" placeholder="Username" required autofocus/><br/><br/>
+                <label>Password: </label>
+                <input class="usertext" type="password" name="password" placeholder="Password" required/><br/><br/>
+                <button class="userprompt" type="submit" name="login" value="Log In"/>Log In<br/>
+            </form>
+        </div>
 
-<form action="" method="post">
-    <h4><?php echo $msg; ?></h4>
-    <label>Username: </label>
-    <input type="text" name="username" placeholder="Username" required autofocus/><br/>
-    <label>Password: </label>
-    <input type="password" name="password" placeholder="Password" required/><br/>
-    <input type="submit" name="login" value="Log In"/><br/>
-</form>
-<p>Click <a href="gameboard.php">here</a> to go to the game!</p>
-<p>Click <a href="test.php">here</a> to test!</p>
-<p>Don't have an account? <a href="registration.php">Create one here!</a></p>
-<p><a href="logout.php">Log out here!</a></p>
-</body>
+    <div class="footer">
+        <ul>
+            <li><a href="login.php">Log In</a></li>
+            <li><a href="registration.php">Register</a></li>
+            <li><a href="gameboard.php">Game Board</a></li>
+            <li><a href="leaderboard.php">Leaderboard</a></li>
+            <li><a href="logout.php">Log Out</a></li>
+        </ul>
+    </div>
+    </body>
 </html>

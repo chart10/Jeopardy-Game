@@ -7,7 +7,7 @@ if(isset($_SESSION['username'])){ //if user is already logged in, redirect the u
 }
 
 //connect to database
-$database = mysqli_connect('localhost', 'root', '', 'users');
+$database = mysqli_connect('localhost', 'root', 'root', 'users');
 //if there is an error connecting to the database, stop the script and display the error
 if (mysqli_connect_errno()) {
 // If there is an error with the connection, stop the script and display the error.
@@ -24,7 +24,7 @@ if(isset($_POST['register'])){
     if(empty($username)){ //if username field was left empty, ask to fill the username
         $msg = "A username is required!";
     }
-    if(empty($password)){ //if password was left empty, ask to enter a password
+    if(empty($password)){ //if password was left empty, ask to enter a password !!!!!!
         $msg = "A password is required!";
     }
 
@@ -52,21 +52,24 @@ if(isset($_POST['register'])){
 ?>
 <!doctype html>
 <html lang="en/us">
-<head>
-    <title>Registration</title>
-</head>
+    <head>
+        <link rel="stylesheet" href="style.css" />
+        <title>Registration</title>
+    </head>
 
-<body>
-<h2>Registration</h2>
-<p>Fill out your information to create an account!</p>
-<form action="" method="post">
-    <legend><h2><?= $msg?></h2></legend>
-    <label>Username: </label>
-    <input type="text" name="username" placeholder="Username" required/><br/>
-    <label>Password: </label>
-    <input type="password" name="password" placeholder="Password" required/><br/>
-    <input type="submit" name="register" value="Register"/><br/>
-</form>
-<p>Already have an account? <a href="login.php">Log in here!</a></p>
-</body>
+    <body>
+        <h1>Registration</h1>
+        <div class="block-text">
+            <p>Fill out your information to create an account!</p>
+            <form action="" method="post">
+                <legend><h2><?= $msg?></h2></legend>
+                <label>Username: </label>
+                <input type="text" name="username" placeholder="Username" required/><br/>
+                <label>Password: </label>
+                <input type="password" name="password" placeholder="Password" required/><br/>
+                <input type="submit" name="register" value="Register"/><br/>
+            </form>
+        </div>
+        <p>Already have an account? <a href="login.php">Log in here!</a></p>
+    </body>
 </html>

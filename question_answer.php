@@ -4,7 +4,7 @@
 particular box from gameboard.php
 TODO: Display question corresponding to original box
 TODO: Each answer should be a link that updates the original box to "right"/"wrong"
-TODO: access to the question-answer page should be disabled from completed question boxes
+TODO: access to the question-answer page should be disabled from completed question boxes!!
 -->
 <?php
 session_start();
@@ -39,24 +39,24 @@ function printQnA(){
             }
         }
     }
-    print ("the question is: $question");
-    echo "<br>$a1";
-    echo "<br>$a2";
-    echo "<br>$a3";
-    echo "<br>$a4";
+//    print ("the question is: $question");
+//    echo "<br>$a1";
+//    echo "<br>$a2";
+//    echo "<br>$a3";
+//    echo "<br>$a4";
     echo "<h2>$question</h2>";
     /*echo "<input type='radio' name='answers' id='anws1' value='a'><label for='anws1'>$a1</label>";
     echo "<input type='radio' name='answers' id='anws2' value='b'><label for='anws2'>$a2</label>";
     echo "<input type='radio' name='answers' id='anws3' value='c'><label for='anws3'>$a3</label>";
     echo "<input type='radio' name='answers' id='anws4' value='d'><label for='anws4'>$a4</label>";*/
     echo ("<form action='answers.php' method='post'>
-        <ul>
+        <ul style='list-style-type: none'>
             <li><input type='radio' name='answers' id='anws1' value='A,$answer,$value,$qnum'><label for='anws1'>$a1</label></li>
             <li><input type='radio' name='answers' id='anws2' value='B,$answer,$value,$qnum'><label for='anws2'>$a2</label></li>
             <li><input type='radio' name='answers' id='anws3' value='C,$answer,$value,$qnum'><label for='anws3'>$a3</label></li>
             <li><input type='radio' name='answers' id='anws4' value='D,$answer,$value,$qnum'><label for='anws4'>$a4</label></li>
+            <li><button type='submit' name='sub'>Submit Final Answer</button></li>
         </ul>
-        <input type='submit' name='sub' value='Submit Final Answer'>
         </form>");
     fclose($data);
 }
@@ -70,7 +70,7 @@ function printQnA(){
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jeopardy Question Page</title>
 </head>
-<body>
+<body class="jepBoard">
 <div class="jepQuestion">
     <?=printQnA(); ?>
     <!--   <h2>$question</h2>
