@@ -20,6 +20,7 @@
 * {
     font-family: Korinna, sans-serif;
     color: white;
+    text-shadow: 2px 2px 8px black;
     font-size: 20px;
 }
 body {
@@ -110,10 +111,10 @@ button:hover {
     font-family: Korinna, sans-serif;
     background-image: url("./assets/blue-background.jpg");
     background-size: cover;
-    display: inline-block;
     border: 2px solid #E89F44;
     padding: .5em;
-    margin: 1rem;
+    margin: 0 auto;
+    width: fit-content;
 }
 .user-heading {
     font-family: Swiss, sans-serif;
@@ -125,6 +126,9 @@ button:hover {
     position: fixed;
     margin: 1rem;
     transition: transform .5s;
+}
+.user-heading h2 {
+    font-family: Swiss, sans-serif;
 }
 .user-heading:hover {
     transform: scale(1.2);
@@ -138,7 +142,6 @@ button:hover {
     background-position: center;
     /*border-spacing: 1em;*/
 }
-
 .jepTable{
     width: 730px;
     margin-top: 3rem;
@@ -186,11 +189,11 @@ button.category:hover {
 /* ~~~~~~~~~~ Question Card ~~~~~~~~~~*/
 .jepQuestion {
     font-family: Korinna, sans-serif;
-    margin: auto;
-    width: 50%;
+    margin: 20% auto;
+    width: fit-content;
     background-image: url("./assets/blue-background.jpg");
     background-size: cover;
-    display: inline-block;
+    /*display: inline-block;*/
     background-position: center;
     padding: .2em;
     border: 2px solid #E89F44;
@@ -204,7 +207,7 @@ label.userprompt {
 }
 input.usertext {
     color: black;
-    float: right;
+    /*float: right;*/
 }
 
 

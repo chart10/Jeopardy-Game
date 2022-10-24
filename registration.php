@@ -1,4 +1,5 @@
 <!--Project 1: Christian Hart, Jamie Kouttu, Alex Diaz-->
+
 <?php
 session_start();
 
@@ -63,13 +64,23 @@ if(isset($_POST['register'])){
             <p>Fill out your information to create an account!</p>
             <form action="" method="post">
                 <legend><h2><?= $msg?></h2></legend>
-                <label class="userprompt">Username: </label>
+                <label class="userprompt">Username:&nbsp&nbsp</label>
                 <input class="usertext" type="text" name="username" placeholder="Username" required/><br/><br/>
-                <label class="userprompt">Password: </label>
+                <label class="userprompt">Password:&nbsp&nbsp</label>
                 <input class="usertext" type="password" name="password" placeholder="Password" required/><br/><br/>
                 <button type="submit" name="register" value="Register"/> Register<br/>
             </form>
         </div>
         <p>Already have an account? <a href="login.php">Log in here!</a></p>
+        <div class="footer">
+            <ul>
+                <li><a href="frontpage.php">Home</a></li>
+                <li><a href="login.php">Log In</a></li>
+                <li><a href="registration.php">Register</a></li>
+                <li><a href="gameboard.php">Game Board</a></li>
+                <li><a href="leaderboard.php">Leaderboard</a></li>
+                <li><a href="logout.php">Log Out</a></li>
+            </ul>
+        </div>
     </body>
 </html>

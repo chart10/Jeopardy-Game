@@ -1,5 +1,10 @@
 <!--Project 1: Christian Hart, Jamie Kouttu, Alex Diaz-->
 
+
+<!-- TODO: If we can manage to get the question results to delay before returning
+     TODO: to the game board, it might be a good idea to make this page do something
+     TODO: similar.
+ -->
 <!doctype html>
 <html lang="en/us">
     <head>
