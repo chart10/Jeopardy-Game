@@ -13,14 +13,13 @@
         <h1>Log Out</h1>
         <div class="block-text"><?php
         session_start();
-        echo "Logging you out! <br/>";
+        echo "Logging you out! <br/><br/>";
 
         unset($_SESSION["username"]);
 
         session_unset();
         session_destroy();
-
-        echo "You have logged out!<br/>";
+        
         echo "<a href='login.php'>Return to login?</a>"
         ?></div>
         <div class="footer">
