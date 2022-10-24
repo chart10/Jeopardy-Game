@@ -16,10 +16,19 @@ TODO: Link to leaderboard
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Jeopardy Home Page</title>
     </head>
-    <body>
+    <body id="frontpage">
 
-        <h1>Jeopardy!</h1>
-        <p>America's favorite quiz show</p>
+        <p id="tagline" class="instructions">AMERICA'S FAVORITE QUIZ SHOW</p>
 
+        <div class="footer">
+            <ul>
+                <li><a href="frontpage.php">Home</a></li>
+                <li><a href="login.php">Log In</a></li>
+                <li><a href="registration.php">Register</a></li>
+                <li><a href="gameboard.php">Game Board</a></li>
+                <li><a href="leaderboard.php">Leaderboard</a></li>
+                <li><a href="logout.php">Log Out</a></li>
+            </ul>
+        </div>
     </body>
 </html>
