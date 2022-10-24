@@ -1,5 +1,7 @@
 <!--Project 1: Christian Hart, Jamie Kouttu, Alex Diaz-->
 
+<!-- Registration page -->
+
 <?php
 session_start();
 

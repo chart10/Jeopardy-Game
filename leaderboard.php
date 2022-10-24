@@ -1,7 +1,7 @@
 <!-- Christian Hart, Jamie Kouttu, Alex Diaz-->
 
-<!-- This page should display a leaderboard of top scores of users
--->
+<!-- This page should display a leaderboard of top scores of users-->
+
 <?php
 
 function leaderboard()
@@ -43,6 +43,7 @@ function leaderboard()
 </head>
 
 <body>
+<h1>Leaderboard</h1>
 <table class="leaderboard">
     <tr>
         <th><h1>Rank</h1></th>
@@ -53,6 +54,7 @@ function leaderboard()
         leaderboard();
     ?>
 </table>
+
 <div class="footer">
     <ul>
         <li><a href="frontpage.php">Home</a></li>

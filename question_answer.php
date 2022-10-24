@@ -1,11 +1,7 @@
 <!-- Christian Hart, Jamie Kouttu, Alex Diaz-->
 
 <!-- This page should include the question and possible answers for a
-particular box from gameboard.php
-TODO: Display question corresponding to original box
-TODO: Each answer should be a link that updates the original box to "right"/"wrong"
-TODO: access to the question-answer page should be disabled from completed question boxes!!
--->
+particular box from gameboard.php -->
 <?php
 session_start();
 $quesNum="";

@@ -62,8 +62,8 @@ button {
     display: inline-block;
     width: 5.5em;
     height: 3em;
-    padding-top: .6em;
-    padding-bottom: .6em;
+    padding-top: .1em;
+    padding-bottom: .1em;
     color: #E89F44;
     background-image: url("./assets/blue-background.jpg");
     background-size: cover;
@@ -116,6 +116,15 @@ button:hover {
     margin: 0 auto;
     width: fit-content;
 }
+.answers{
+    font-family: Korinna, sans-serif;
+    background-image: url("./assets/blue-background.jpg");
+    background-size: cover;
+    border: 2px solid #E89F44;
+    padding: .5em;
+    margin: 20% auto;
+    width: fit-content;
+}
 .user-heading {
     font-family: Swiss, sans-serif;
     background-image: url("./assets/blue-background.jpg");
@@ -145,8 +154,8 @@ button:hover {
 .jepTable{
     width: 730px;
     margin-top: 3rem;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 25%;
+    margin-right: 25%;
 }
 .jepButton {
     clear: right;
@@ -207,7 +216,7 @@ label.userprompt {
 }
 input.usertext {
     color: black;
-    /*float: right;*/
+    text-shadow: none;
 }
 
 
@@ -226,7 +235,7 @@ input.usertext {
 }
 .footer li {
     flex-flow: row wrap;
-    padding: 0 30px;
+    padding: 30px 30px;
     transition: transform .2s;
 }
 .footer li:hover {
@@ -245,7 +254,7 @@ input.usertext {
     margin-right:auto;
 }
 
-.leaderboard td, tr, th{
+.leaderboard td, .leaderboard tr, .leaderboard th{
     text-align: center;
     padding: 10px;
     margin: 5px;

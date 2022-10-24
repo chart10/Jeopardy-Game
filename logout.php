@@ -1,10 +1,8 @@
 <!--Project 1: Christian Hart, Jamie Kouttu, Alex Diaz-->
 
 
-<!-- TODO: If we can manage to get the question results to delay before returning
-     TODO: to the game board, it might be a good idea to make this page do something
-     TODO: similar.
- -->
+<!-- Logs the user out -->
+
 <!doctype html>
 <html lang="en/us">
     <head>
@@ -15,11 +13,11 @@
         <h1>Log Out</h1>
         <div class="block-text"><?php
         session_start();
-        echo "Logging you out, " . $_SESSION["username"] . "! <br/>";
+        echo "Logging you out! <br/>";
 
         unset($_SESSION["username"]);
-        unset($_SESSION["password"]);
 
+        session_unset();
         session_destroy();
 
         echo "You have logged out!<br/>";
