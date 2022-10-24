@@ -63,11 +63,11 @@ if(isset($_POST['register'])){
             <p>Fill out your information to create an account!</p>
             <form action="" method="post">
                 <legend><h2><?= $msg?></h2></legend>
-                <label>Username: </label>
-                <input type="text" name="username" placeholder="Username" required/><br/>
-                <label>Password: </label>
-                <input type="password" name="password" placeholder="Password" required/><br/>
-                <input type="submit" name="register" value="Register"/><br/>
+                <label class="userprompt">Username: </label>
+                <input class="usertext" type="text" name="username" placeholder="Username" required/><br/><br/>
+                <label class="userprompt">Password: </label>
+                <input class="usertext" type="password" name="password" placeholder="Password" required/><br/><br/>
+                <button type="submit" name="register" value="Register"/> Register<br/>
             </form>
         </div>
         <p>Already have an account? <a href="login.php">Log in here!</a></p>

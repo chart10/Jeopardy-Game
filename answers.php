@@ -16,7 +16,7 @@ $userInput = 0;
         <link rel="stylesheet" href="style.css" />
         <title>Log Out</title>
     </head>
-    <body class="gameboard">
+    <body class="jepBoard">
 
         <?php if($answer[0]==$corAnswer){ ?>
             <div class="block-text"><p>That's correct! $<?php print($value) ?> is added too your score!</p></div>

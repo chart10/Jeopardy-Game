@@ -79,6 +79,7 @@ button:hover {
     margin: 1rem;
 }
 
+
 /*  ~~~~~~~~~~ Front Page ~~~~~~~~~~ */
 #frontpage {
     background-image: url("./assets/jeopardy-frontpage.jpg");
@@ -89,7 +90,13 @@ button:hover {
     width: 100%;
     text-align: center;
     margin-top: 6rem;
+    transition:transform .5s;
 }
+#tagline:hover {
+    /*transform: rotate(-20deg);*/
+    transform: scale(2);
+}
+
 
 /* ~~~~~~~~~~ Game Board ~~~~~~~~~~*/
 .gameboard-heading {
@@ -175,6 +182,7 @@ button.category:hover {
     float: right;
 }
 
+
 /* ~~~~~~~~~~ Question Card ~~~~~~~~~~*/
 .jepQuestion {
     font-family: Korinna, sans-serif;
@@ -189,6 +197,7 @@ button.category:hover {
     color: white;
 }
 
+
 /* ~~~~~~~~~~ User Forms ~~~~~~~~~~*/
 label.userprompt {
     float:left;
@@ -197,6 +206,7 @@ input.usertext {
     color: black;
     float: right;
 }
+
 
 /* ~~~~~~~~~~ Footer ~~~~~~~~~~*/
 .footer {
