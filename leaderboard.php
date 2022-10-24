@@ -1,7 +1,6 @@
 <!-- Christian Hart, Jamie Kouttu, Alex Diaz-->
 
 <!-- This page should display a leaderboard of top scores of users
-     TODO: Design this page to display the Leaderboard and make it look good
 -->
 <?php
 
@@ -10,7 +9,7 @@ function leaderboard()
     $database = mysqli_connect('localhost', 'root', '', 'users');
     //if there is an error connecting to the database, stop the script and display the error
     if (mysqli_connect_errno()) {
-    // If there is an error with the connection, stop the script and display the error.
+        // If there is an error with the connection, stop the script and display the error.
         exit('Failed to connect to MySQL: ' . mysqli_connect_error());
     }
 
@@ -33,8 +32,7 @@ function leaderboard()
             $rank = $rank + 1;
         }
     }
-    $query = "SELECT username, topscore FROM users order by topscore desc";
-    $result = mysqli_query($database, $query);
+}
 ?>
 
 <!doctype html>
