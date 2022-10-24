@@ -1,11 +1,6 @@
 <!-- Christian Hart, Jamie Kouttu, Alex Diaz -->
 
-<!-- This is the landing page for the game
-TODO: Design visual logo of the game
-TODO: Create HTML form for the user to login to an instance of the game
-TODO: Link to account creation page
-TODO: Link to leaderboard
--->
+<!-- This is the landing page for the game -->
 
 <!DOCTYPE html>
 <html lang="en-us">

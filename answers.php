@@ -1,7 +1,6 @@
 <!-- Christian Hart, Jamie Kouttu, Alex Diaz -->
 
-<!-- TODO: (Christian) This page should be all set, but it skips through too fast for the user to read.
-     TODO: Find a way for this page to remain on screen for a few seconds, maybe with a sleep() function.-->
+<!-- Tells the user whether their answer was correct and the change in points -->
 <?php
 session_start();
 $dataImp=$_POST["answers"]; //receive data in format (user answer),(correct answer),(question value)
@@ -19,12 +18,12 @@ $userInput = 0;
     <body class="jepBoard">
 
         <?php if($answer[0]==$corAnswer){ ?>
-            <div class="block-text"><p>That's correct! $<?php print($value) ?> is added too your score!</p></div>
+            <div class="answers"><p>That's correct! $<?php print($value) ?> is added too your score!</p></div>
             <?php $_SESSION['score'] = $_SESSION['score'] + $value; //add to score!!!!!
             $userInput = 1;
         }
         else { ?>
-            <div class="block-text"><p>I'm afraid that's incorrect! $<?php print($value) ?> is subtracted from your score!</p></div>
+            <div class="answers"><p>I'm afraid that's incorrect! $<?php print($value) ?> is subtracted from your score!</p></div>
             <?php $_SESSION['score'] = $_SESSION['score'] - $value;
             $userInput = 2;
         }
@@ -32,7 +31,7 @@ $userInput = 0;
         $qnum = "q" . $answer[3];       // This is the question number
         $_SESSION[$qnum] = $userInput;  // Update the session to hold a 1 or 2 for this particular question
 
-        header('Refresh: 1; URL = gameboard.php');
+        header('Refresh: 2; URL = gameboard.php');
         ?>
 
         <div class="footer">

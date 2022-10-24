@@ -1,4 +1,7 @@
 <!--Project 1: Christian Hart, Jamie Kouttu, Alex Diaz-->
+
+<!-- Log in page for the user -->
+
 <?php
 session_start();
 
@@ -15,7 +18,9 @@ if (mysqli_connect_errno()) {
 }
 
 $msg = '';
-
+if(isset($_SESSION['username'])){ //if already logged in, send to gameboard
+    header('Refresh: 0; URL = gameboard.php');
+}
 if (isset($_POST['login'])) {
     $username = mysqli_real_escape_string($database, $_POST['username']);
     $password = mysqli_real_escape_string($database, $_POST['password']);
