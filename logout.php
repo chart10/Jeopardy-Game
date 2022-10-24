@@ -1,6 +1,5 @@
 <!--Project 1: Christian Hart, Jamie Kouttu, Alex Diaz-->
 
-
 <!doctype html>
 <html lang="en/us">
     <head>
@@ -23,6 +22,7 @@
         ?></div>
         <div class="footer">
             <ul>
+                <li><a href="frontpage.php">Home</a></li>
                 <li><a href="login.php">Log In</a></li>
                 <li><a href="registration.php">Register</a></li>
                 <li><a href="gameboard.php">Game Board</a></li>

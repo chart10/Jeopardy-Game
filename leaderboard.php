@@ -33,6 +33,7 @@ if (mysqli_num_rows($result) > 0) {
 <body>
 <div class="footer">
     <ul>
+        <li><a href="frontpage.php">Home</a></li>
         <li><a href="login.php">Log In</a></li>
         <li><a href="registration.php">Register</a></li>
         <li><a href="gameboard.php">Game Board</a></li>
