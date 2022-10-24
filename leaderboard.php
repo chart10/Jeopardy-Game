@@ -54,16 +54,15 @@ function leaderboard()
         leaderboard();
     ?>
 </table>
-
-<div class="footer">
-    <ul>
-        <li><a href="frontpage.php">Home</a></li>
-        <li><a href="login.php">Log In</a></li>
-        <li><a href="registration.php">Register</a></li>
-        <li><a href="gameboard.php">Game Board</a></li>
-        <li><a href="leaderboard.php">Leaderboard</a></li>
-        <li><a href="logout.php">Log Out</a></li>
-    </ul>
-</div>
+    <div class="footer">
+        <ul>
+            <li><a href="frontpage.php">Home</a></li>
+            <li><a href="login.php">Log In</a></li>
+            <li><a href="registration.php">Register</a></li>
+            <li><a href="gameboard.php">Game Board</a></li>
+            <li><a href="leaderboard.php">Leaderboard</a></li>
+            <li><a href="logout.php">Log Out</a></li>
+        </ul>
+    </div>
 </body>
 </html>
