@@ -86,12 +86,14 @@ button:hover {
     background-image: url("./assets/jeopardy-frontpage.jpg");
     background-position: bottom;
 }
+
 #tagline {
     font-size: 36px;
     text-align: center;
     margin-top: 6rem;
     transition:transform .5s;
 }
+
 #tagline:hover {
     /*transform: rotate(-20deg);*/
     transform: scale(2);
@@ -100,6 +102,7 @@ button:hover {
 
 /* ~~~~~~~~~~ Game Board ~~~~~~~~~~*/
 .gameboard-heading {
+    text-align: center;
     margin: 0 31% 0 31%;
     transition: transform .5s;
 }
@@ -137,6 +140,7 @@ button:hover {
 }
 .user-heading h2 {
     font-family: Swiss, sans-serif;
+    font-size: 30px;
 }
 .user-heading:hover {
     transform: scale(1.2);
@@ -198,7 +202,7 @@ button.category:hover {
 .jepQuestion {
     font-family: Korinna, sans-serif;
     margin: 20% auto;
-    width: fit-content;
+    width: 50%;
     background-image: url("./assets/blue-background.jpg");
     background-size: cover;
     /*display: inline-block;*/
