@@ -19,7 +19,7 @@
 
         session_unset();
         session_destroy();
-        
+
         echo "<a href='login.php'>Return to login?</a>"
         ?></div>
         <div class="footer">
