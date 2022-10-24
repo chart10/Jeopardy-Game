@@ -88,7 +88,6 @@ button:hover {
 }
 #tagline {
     font-size: 36px;
-    width: 100%;
     text-align: center;
     margin-top: 6rem;
     transition:transform .5s;
