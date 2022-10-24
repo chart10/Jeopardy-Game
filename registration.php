@@ -8,7 +8,7 @@ if(isset($_SESSION['username'])){ //if user is already logged in, redirect the u
 }
 
 //connect to database
-$database = mysqli_connect('localhost', 'root', 'root', 'users');
+$database = mysqli_connect('localhost', 'root', '', 'users');
 //if there is an error connecting to the database, stop the script and display the error
 if (mysqli_connect_errno()) {
 // If there is an error with the connection, stop the script and display the error.
