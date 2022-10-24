@@ -73,16 +73,16 @@ function printQnA(){
 <body class="jepBoard">
 <div class="jepQuestion">
     <?=printQnA(); ?>
-    <!--   <h2>$question</h2>
-    /* <form action="<  ?= $_SERVER['PHP_SELF'];?>" method="post">
-    <ul>
-        <li><input type="radio" name="answers" id="anws1" value="a"><label for="anws1">$a1</label></li>
-        <li><input type="radio" name="answers" id="anws2" value="b"><label for="anws2">$a2</label></li>
-        <li><input type="radio" name="answers" id="anws3" value="c"><label for="anws3">$a3</label></li>
-        <li><input type="radio" name="answers" id="anws4" value="d"><label for="anws4">$a4</label></li>
-    </ul>
-    <input type="button" name="sub" value="Find Answer!">
-    </form> -->
+<!--       <h2>$question</h2>-->
+<!--    /* <form action="<  ?= $_SERVER['PHP_SELF'];?>" method="post">-->
+<!--    <ul>-->
+<!--        <li><input type="radio" name="answers" id="anws1" value="a"><label for="anws1">$a1</label></li>-->
+<!--        <li><input type="radio" name="answers" id="anws2" value="b"><label for="anws2">$a2</label></li>-->
+<!--        <li><input type="radio" name="answers" id="anws3" value="c"><label for="anws3">$a3</label></li>-->
+<!--        <li><input type="radio" name="answers" id="anws4" value="d"><label for="anws4">$a4</label></li>-->
+<!--    </ul>-->
+<!--    <input type="button" name="sub" value="Find Answer!">-->
+<!--    </form>-->
 </div>
 </body>
 </html>

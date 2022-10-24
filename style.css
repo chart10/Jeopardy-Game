@@ -70,7 +70,7 @@ button {
     /*box-shadow: 2px 2px 1px #888888;*/
 }
 button:hover {
-    color: #9c8f04;
+    color: #bb6d0e;
     transform: scale(1.1);
 }
 .instructions {
@@ -178,7 +178,7 @@ button.category:hover {
 /* ~~~~~~~~~~ Question Card ~~~~~~~~~~*/
 .jepQuestion {
     font-family: Korinna, sans-serif;
-    margin: auto auto;
+    margin: auto;
     width: 50%;
     background-image: url("./assets/blue-background.jpg");
     background-size: cover;

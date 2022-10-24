@@ -5,7 +5,7 @@
 <html lang="en/us">
     <head>
         <link rel="stylesheet" href="style.css" />
-        <title>Log In</title>
+        <title>Log Out</title>
     </head>
     <body>
         <h1>Log Out</h1>
@@ -21,9 +21,14 @@
         echo "You have logged out!<br/>";
         echo "<a href='login.php'>Return to login?</a>"
         ?></div>
-        <p class="instructions">Click <a href="gameboard.php">here</a> to go to the game!</p>
-        <p class="instructions">Click <a href="test.php">here</a> to test!</p>
-        <p class="instructions">Don't have an account? <a href="registration.php">Create one here!</a></p>
-        <p class="instructions"><a href="logout.php">Log out here!</a></p>
+        <div class="footer">
+            <ul>
+                <li><a href="login.php">Log In</a></li>
+                <li><a href="registration.php">Register</a></li>
+                <li><a href="gameboard.php">Game Board</a></li>
+                <li><a href="leaderboard.php">Leaderboard</a></li>
+                <li><a href="logout.php">Log Out</a></li>
+            </ul>
+        </div>
     </body>
 </html>
