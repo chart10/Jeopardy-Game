@@ -6,7 +6,7 @@
 
 function leaderboard()
 {
-    $database = mysqli_connect('localhost', 'root', '', 'users');
+    $database = mysqli_connect('localhost', 'root', 'root', 'users');
     //if there is an error connecting to the database, stop the script and display the error
     if (mysqli_connect_errno()) {
         // If there is an error with the connection, stop the script and display the error.
