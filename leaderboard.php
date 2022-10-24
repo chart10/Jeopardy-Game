@@ -1,6 +1,7 @@
 <!-- Christian Hart, Jamie Kouttu, Alex Diaz-->
 
 <!-- This page should display a leaderboard of top scores of users
+     TODO: Design this page to display the Leaderboard and make it look good
 -->
 <?php
 
@@ -32,9 +33,10 @@ function leaderboard()
             $rank = $rank + 1;
         }
     }
-}
-
+    $query = "SELECT username, topscore FROM users order by topscore desc";
+    $result = mysqli_query($database, $query);
 ?>
+
 <!doctype html>
 <html lang="en/us">
 <head>
@@ -64,5 +66,4 @@ function leaderboard()
     </ul>
 </div>
 </body>
-
 </html>

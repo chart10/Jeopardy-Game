@@ -58,9 +58,9 @@ if (isset($_POST['login'])) {
 
             <form action="" method="post">
                 <h4><?php echo $msg; ?></h4>
-                <label class="userprompt">Username: </label>
+                <label class="userprompt">Username:&nbsp&nbsp</label>
                 <input class="usertext" type="text" name="username" placeholder="Username" required autofocus/><br/><br/>
-                <label>Password: </label>
+                <label>Password:&nbsp&nbsp</label>
                 <input class="usertext" type="password" name="password" placeholder="Password" required/><br/><br/>
                 <button class="userprompt" type="submit" name="login" value="Log In"/>Log In<br/>
             </form>
