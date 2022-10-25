@@ -1,4 +1,4 @@
-<!-- Christian Hart, Jamie Kouttu, Alex Diaz -->
+<!-- Project 1: Christian Hart, Jamie Kouttu, Alex Diaz -->
 
 <!-- This is the landing page for the game -->
 
@@ -23,6 +23,7 @@
                 <li><a href="gameboard.php">Game Board</a></li>
                 <li><a href="leaderboard.php">Leaderboard</a></li>
                 <li><a href="logout.php">Log Out</a></li>
+                <li><a href="credits.php">Credits</a></li>
             </ul>
         </div>
     </body>

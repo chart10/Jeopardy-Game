@@ -1,4 +1,4 @@
-<!--Project 1: Christian Hart, Jamie Kouttu, Alex Diaz-->
+<!-- Project 1: Christian Hart, Jamie Kouttu, Alex Diaz-->
 
 <!-- Log in page for the user -->
 
@@ -54,7 +54,9 @@ if (isset($_POST['login'])) {
 <html lang="en/us">
     <head>
         <link rel="stylesheet" href="style.css" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Log In</title>
     </head>
     <body>
@@ -64,22 +66,25 @@ if (isset($_POST['login'])) {
             <form action="" method="post">
                 <h4><?php echo $msg; ?></h4>
                 <label class="userprompt">Username:&nbsp&nbsp</label>
-                <input class="usertext" type="text" name="username" placeholder="Username" required autofocus/><br/><br/>
+                <input class="usertext" type="text" name="username" placeholder="Username" required autofocus/>
+                <br/><br/>
                 <label>Password:&nbsp&nbsp</label>
-                <input class="usertext" type="password" name="password" placeholder="Password" required/><br/><br/>
+                <input class="usertext" type="password" name="password" placeholder="Password" required/>
+                <br/><br/>
                 <button class="userprompt" type="submit" name="login" value="Log In"/>Log In<br/>
             </form>
         </div>
 
-    <div class="footer">
-        <ul>
-            <li><a href="frontpage.php">Home</a></li>
-            <li><a href="login.php">Log In</a></li>
-            <li><a href="registration.php">Register</a></li>
-            <li><a href="gameboard.php">Game Board</a></li>
-            <li><a href="leaderboard.php">Leaderboard</a></li>
-            <li><a href="logout.php">Log Out</a></li>
-        </ul>
-    </div>
+        <div class="footer">
+            <ul>
+                <li><a href="frontpage.php">Home</a></li>
+                <li><a href="login.php">Log In</a></li>
+                <li><a href="registration.php">Register</a></li>
+                <li><a href="gameboard.php">Game Board</a></li>
+                <li><a href="leaderboard.php">Leaderboard</a></li>
+                <li><a href="logout.php">Log Out</a></li>
+                <li><a href="credits.php">Credits</a></li>
+            </ul>
+        </div>
     </body>
 </html>

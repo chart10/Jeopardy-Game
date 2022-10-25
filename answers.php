@@ -1,6 +1,7 @@
-<!-- Christian Hart, Jamie Kouttu, Alex Diaz -->
+<!-- Project 1: Christian Hart, Jamie Kouttu, Alex Diaz -->
 
 <!-- Tells the user whether their answer was correct and the change in points -->
+
 <?php
 session_start();
 $dataImp=$_POST["answers"]; //receive data in format (user answer),(correct answer),(question value)
@@ -13,6 +14,9 @@ $userInput = 0;
 <html lang="en/us">
     <head>
         <link rel="stylesheet" href="style.css" />
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Log Out</title>
     </head>
     <body class="jepBoard">
@@ -42,6 +46,7 @@ $userInput = 0;
                 <li><a href="gameboard.php">Game Board</a></li>
                 <li><a href="leaderboard.php">Leaderboard</a></li>
                 <li><a href="logout.php">Log Out</a></li>
+                <li><a href="credits.php">Credits</a></li>
             </ul>
         </div>
     </body>

@@ -57,6 +57,9 @@ if(isset($_POST['register'])){
 <html lang="en/us">
     <head>
         <link rel="stylesheet" href="style.css" />
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Registration</title>
     </head>
 
@@ -82,6 +85,7 @@ if(isset($_POST['register'])){
                 <li><a href="gameboard.php">Game Board</a></li>
                 <li><a href="leaderboard.php">Leaderboard</a></li>
                 <li><a href="logout.php">Log Out</a></li>
+                <li><a href="credits.php">Credits</a></li>
             </ul>
         </div>
     </body>

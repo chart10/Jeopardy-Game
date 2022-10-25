@@ -126,6 +126,9 @@ button:hover {
 .gameboard-heading:hover {
     transform: skewX(-15deg);
 }
+#newrecord {
+    text-align: center;
+}
 .block-text{
     font-family: Korinna, sans-serif;
     background-image: url("./assets/blue-background.jpg");
@@ -272,7 +275,9 @@ input.usertext {
     margin-left:auto;
     margin-right:auto;
 }
-
+#credits {
+    width: 50%;
+}
 .leaderboard td, .leaderboard tr, .leaderboard th{
     text-align: center;
     padding: 10px;
@@ -280,7 +285,6 @@ input.usertext {
     border: 2px solid #E89F44;
     border-collapse: collapse;
 }
-
 .leaderboard th h1{
     font-size: 50px;
 }

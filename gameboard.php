@@ -1,14 +1,6 @@
-<!-- Christian Hart, Jamie Kouttu, Alex Diaz -->
+<!-- Project 1: Christian Hart, Jamie Kouttu, Alex Diaz -->
 
-<!-- This is where we should include the code for the main page of an active game.
-TODO: HTML table of all questions in a Jeopardy grid layout. DONE!
-TODO: Design PHP logic that links each dollar value to a question_answer page DONE!
-TODO: Page should replace dollar value with "right"/"wrong" based on user answer DONE!
-TODO: User div that displays username and score at the bottom of the page (logout option too) DONE!
-TODO: Button that resets the game for the user?
-TODO: (OPTIONAL) Randomize a box as "Daily Double" that allows the user to wager money
-TODO: Link to leaderboard
--->
+<!-- This is where we should include the code for the main page of an active game. -->
 
 <?php
     session_start();
@@ -79,7 +71,7 @@ TODO: Link to leaderboard
                     $score = $_SESSION['score'];
                     $query = "UPDATE users SET topscore = '$score' WHERE username ='$username'";
                     mysqli_query($database, $query); ?>
-                    <h1>New personal record!</h1>
+                    <h1 id="newrecord">New personal record!</h1>
                 <?php } ?>
 
                 <div class="block-text">
@@ -107,56 +99,57 @@ TODO: Link to leaderboard
                     <th><button class="category">MUSIC</button></th>
                 </tr>
                 <form class="gameboard" action="question_answer.php" method="get">
-                <tr>
-                    <td><?php rightWrong('q1',1,200); ?>
-                    <td><?php rightWrong('q6',6,200); ?>
-                    <td><?php rightWrong('q11',11,200); ?>
-                    <td><?php rightWrong('q16',16,200); ?>
-                    <td><?php rightWrong('q21',21,200); ?>
-                </tr>
-                <tr>
-                    <td><?php rightWrong('q2',2,400); ?>
-                    <td><?php rightWrong('q7',7,400); ?>
-                    <td><?php rightWrong('q12',12,400); ?>
-                    <td><?php rightWrong('q17',17,400); ?>
-                    <td><?php rightWrong('q22',22,400); ?>
-                </tr>
-                <tr>
-                    <td><?php rightWrong('q3',3,600); ?>
-                    <td><?php rightWrong('q8',8,600); ?>
-                    <td><?php rightWrong('q13',13,600); ?>
-                    <td><?php rightWrong('q18',18,600); ?>
-                    <td><?php rightWrong('q23',23,600); ?>
-                </tr>
-                <tr>
-                    <td><?php rightWrong('q4',4,800); ?>
-                    <td><?php rightWrong('q9',9,800); ?>
-                    <td><?php rightWrong('q14',14,800); ?>
-                    <td><?php rightWrong('q19',19,800); ?>
-                    <td><?php rightWrong('q24',24,800); ?>
-                </tr>
-                <tr>
-                    <td><?php rightWrong('q5',5,1000); ?>
-                    <td><?php rightWrong('q10',10,1000); ?>
-                    <td><?php rightWrong('q15',15,1000); ?>
-                    <td><?php rightWrong('q20',20,1000); ?>
-                    <td><?php rightWrong('q25',25,1000); ?>
-                </tr>
+                    <tr>
+                        <td><?php rightWrong('q1',1,200); ?>
+                        <td><?php rightWrong('q6',6,200); ?>
+                        <td><?php rightWrong('q11',11,200); ?>
+                        <td><?php rightWrong('q16',16,200); ?>
+                        <td><?php rightWrong('q21',21,200); ?>
+                    </tr>
+                    <tr>
+                        <td><?php rightWrong('q2',2,400); ?>
+                        <td><?php rightWrong('q7',7,400); ?>
+                        <td><?php rightWrong('q12',12,400); ?>
+                        <td><?php rightWrong('q17',17,400); ?>
+                        <td><?php rightWrong('q22',22,400); ?>
+                    </tr>
+                    <tr>
+                        <td><?php rightWrong('q3',3,600); ?>
+                        <td><?php rightWrong('q8',8,600); ?>
+                        <td><?php rightWrong('q13',13,600); ?>
+                        <td><?php rightWrong('q18',18,600); ?>
+                        <td><?php rightWrong('q23',23,600); ?>
+                    </tr>
+                    <tr>
+                        <td><?php rightWrong('q4',4,800); ?>
+                        <td><?php rightWrong('q9',9,800); ?>
+                        <td><?php rightWrong('q14',14,800); ?>
+                        <td><?php rightWrong('q19',19,800); ?>
+                        <td><?php rightWrong('q24',24,800); ?>
+                    </tr>
+                    <tr>
+                        <td><?php rightWrong('q5',5,1000); ?>
+                        <td><?php rightWrong('q10',10,1000); ?>
+                        <td><?php rightWrong('q15',15,1000); ?>
+                        <td><?php rightWrong('q20',20,1000); ?>
+                        <td><?php rightWrong('q25',25,1000); ?>
+                    </tr>
                 </form>
             </table>
-        <?php
+            <?php
+            }
         }
-    }
-    ?>
-    <div class="footer">
-        <ul>
-            <li><a href="frontpage.php">Home</a></li>
-            <li><a href="login.php">Log In</a></li>
-            <li><a href="registration.php">Register</a></li>
-            <li><a href="gameboard.php">Game Board</a></li>
-            <li><a href="leaderboard.php">Leaderboard</a></li>
-            <li><a href="logout.php">Log Out</a></li>
-        </ul>
-    </div>
+        ?>
+        <div class="footer">
+            <ul>
+                <li><a href="frontpage.php">Home</a></li>
+                <li><a href="login.php">Log In</a></li>
+                <li><a href="registration.php">Register</a></li>
+                <li><a href="gameboard.php">Game Board</a></li>
+                <li><a href="leaderboard.php">Leaderboard</a></li>
+                <li><a href="logout.php">Log Out</a></li>
+                <li><a href="credits.php">Credits</a></li>
+            </ul>
+        </div>
     </body>
 </html>
