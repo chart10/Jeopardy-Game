@@ -5,10 +5,6 @@
 <?php
 session_start();
 
-if(isset($_SESSION['username'])){ //if user is already logged in, redirect the user to the game
-    header('URL = gameboard.php');
-}
-
 //connect to database
 $database = mysqli_connect('localhost', 'root', '', 'users');
 //if there is an error connecting to the database, stop the script and display the error
