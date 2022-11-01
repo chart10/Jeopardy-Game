@@ -35,7 +35,6 @@ if (isset($_POST['login'])) {
 
     if (mysqli_num_rows($login_result) == 1) {
         //if a matching user was found, log in is suggessful! Redirect to game
-        $_SESSION['valid'] = true;
         $_SESSION['username'] = $_POST['username'];
 
         header('Refresh: 0; URL = gameboard.php');

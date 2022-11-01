@@ -45,7 +45,6 @@ if(isset($_POST['register'])){
   			  VALUES('$username', '$password')";
         mysqli_query($database, $query);
         $_SESSION['username'] = $username;
-        $_SESSION['valid'] = true;
 
         $msg = "You have registered, and are now logged in!";
         header('Refresh: 2; URL = gameboard.php'); //redirect user to game
