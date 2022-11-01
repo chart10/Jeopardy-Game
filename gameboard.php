@@ -57,7 +57,7 @@
             //and store the user's score in the database if it is better than their previous top score
             if ($gameboardFinished) {
                 //connect to database
-                $database = mysqli_connect('localhost', 'chart10', 'chart10', 'chart10');
+                $database = mysqli_connect('localhost', 'jkouttu1', 'jkouttu1', 'jkouttu1');
                 //if there is an error connecting to the database, stop the script and display the error
                 if (mysqli_connect_errno()) {
                     // If there is an error with the connection, stop the script and display the error.
