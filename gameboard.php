@@ -15,11 +15,14 @@
     // the question has been answered
     function rightWrong($qnum, $num, $value) {
         if($_SESSION[$qnum] == 0){ ?>
-            <button class="jepButton" type="submit" name="qnum" value="<?php print($num) ?>">$<?php print($value) ?></button></td>
+            <button class="jepButton" type="submit" name="qnum"
+                    value="<?php print($num) ?>">$<?php print($value) ?></button></td>
         <?php } else if($_SESSION[$qnum] == 1){ ?>
-            <button class="correct" type="submit" name="<?php print($qnum) ?>" value="<?php print($num) ?>" disabled>RIGHT!</button></td>
+            <button class="correct" type="submit" name="<?php print($qnum) ?>"
+                    value="<?php print($num) ?>" disabled>RIGHT!</button></td>
         <?php } else if($_SESSION[$qnum] == 2){ ?>
-            <button class="wrong" type="submit" name="<?php print($qnum) ?>" value="<?php print($num) ?>" disabled>WRONG!</button></td>
+            <button class="wrong" type="submit" name="<?php print($qnum) ?>"
+                    value="<?php print($num) ?>" disabled>WRONG!</button></td>
             <?php }
     }
 ?>
@@ -54,7 +57,7 @@
             //and store the user's score in the database if it is better than their previous top score
             if ($gameboardFinished) {
                 //connect to database
-                $database = mysqli_connect('localhost', 'root', '', 'users');
+                $database = mysqli_connect('localhost', 'chart10', 'chart10', 'chart10');
                 //if there is an error connecting to the database, stop the script and display the error
                 if (mysqli_connect_errno()) {
                     // If there is an error with the connection, stop the script and display the error.

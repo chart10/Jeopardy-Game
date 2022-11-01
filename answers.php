@@ -22,7 +22,7 @@ $userInput = 0;
     <body class="jepBoard">
 
         <?php if($answer[0]==$corAnswer){ ?>
-            <div class="answers"><p>That's correct! $<?php print($value) ?> is added too your score!</p></div>
+            <div class="answers"><p>That's correct! $<?php print($value) ?> is added to your score!</p></div>
             <?php $_SESSION['score'] = $_SESSION['score'] + $value; //add to score!!!!!
             $userInput = 1;
         }

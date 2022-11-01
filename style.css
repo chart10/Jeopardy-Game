@@ -166,6 +166,7 @@ button:hover {
 }
 .gameboard {
     display: flex;
+
 }
 .jepBoard {
     background-image: url("./assets/jeopardy-board-background.jpg");
@@ -176,8 +177,8 @@ button:hover {
 .jepTable{
     width: 730px;
     margin-top: 3rem;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .jepButton {
     clear: right;
